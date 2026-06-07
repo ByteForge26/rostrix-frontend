@@ -1,0 +1,132 @@
+* {
+  font-family: "Roboto", sans-serif !important;
+}
+@keyframes topToBottom {
+  from {
+    top: -400px;
+  }
+  to {
+    top: calc(100% + 400px);
+  }
+}
+.react-time-picker {
+  width: 100%;
+  .react-time-picker__wrapper {
+    border: 1px solid #e2e8f0;
+    padding: 7px;
+    width: 100%;
+    border-radius: 6px;
+  }
+  .react-time-picker__clock {
+    display: none !important;
+  }
+  .react-time-picker__inputGroup__input {
+    width: 26px !important;
+  }
+}
+.rc-time-picker {
+  width: 100%;
+}
+.rc-time-picker-input {
+  height: 42px !important;
+}
+.rc-time-picker-clear {
+  display: none !important;
+}
+.rc-time-picker-panel {
+  z-index: 1111111;
+}
+
+@keyframes blink {
+  0% {
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.502);
+  }
+
+  50% {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.502);
+  }
+
+  100% {
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.502);
+  }
+}
+
+.pagination {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 16px;
+  .active {
+    border: 1px solid #027dbc;
+    border-radius: 50%;
+  }
+  .page-item {
+    list-style: none;
+    padding: 2px 12px;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.rs-picker-menu .rs-calendar-table-cell-week-number {
+  background-color: #3138510d;
+  color: #718096;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.rs-picker-menu
+  .rs-calendar-table-row:not(.rs-calendar-table-header-row):hover
+  .rs-calendar-table-cell-content {
+  background-color: #027dbc29;
+  color: #027dbc;
+}
+
+.rs-picker-menu
+  .rs-calendar-table-row:not(.rs-calendar-table-header-row):has(
+    .rs-calendar-table-cell-selected
+  )
+  .rs-calendar-table-cell-content {
+  background-color: #027dbc29;
+  color: #027dbc;
+  box-shadow: inset 0 0 0 1px #027dbc;
+}
+.rs-calendar-table-cell-is-today .rs-calendar-table-cell-content {
+  box-shadow: inset 0 0 0 1px #027dbc;
+}
+.rs-picker-has-value .rs-btn .rs-picker-toggle-value,
+.rs-picker-has-value .rs-picker-toggle .rs-picker-toggle-value {
+  color: #027dbc;
+}
+.rs-picker-default .rs-picker-toggle.rs-btn:hover,
+.rs-picker-default .rs-picker-toggle.rs-btn {
+  border-color: #027dbc;
+}
+.rs-btn-primary {
+  background-color: #027dbc;
+  color: white;
+}
+p + p {
+  margin-top: unset;
+}
+hr {
+  margin: unset;
+}
+.ProgressBar {
+  width: 100%;
+}
+
+.rs-table-cell-header-sort-wrapper {
+  display: none;
+}
+.react-toast-notifications__container {
+  z-index: 2000 !important;
+}
+.no-options {
+  .rdrDefinedRangesWrapper{
+    width: 0; }
+}

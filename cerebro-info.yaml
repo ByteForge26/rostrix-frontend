@@ -1,0 +1,17 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dsi-rt-effimate-client
+  annotations:
+    backstage.io/adr-location: docs/adrs
+    #decathlon.net/quapi: 'your quapi id'
+    #decathlon.net/slos: '' # List of slo IDs separated by a comma (eg: slo-oneff)
+    #decathlon.net/maturity-matrix: '' # List of maturity matrix ids separated by a comma
+    sonarqube.org/project-key: dktunited_dsi-rt-effimate-client
+    github.com/project-slug: dktunited/dsi-rt-effimate-client
+spec:
+  type: service
+  system: 50c3667b-a6d0-4f2a-b44c-6a48b80e7594
+  owner: cs-cloudservices-india
+  lifecycle: production

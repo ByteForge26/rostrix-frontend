@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "decathlon-olik"
+  },
+  "targets": {
+    "decathlon-olik": {
+      "hosting": {
+        "rosterx-olik": [
+          "rosterx-olik"
+        ]
+      }
+    }
+  }
+}

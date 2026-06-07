@@ -1,0 +1,40 @@
+name: Enforce Branch Naming Conventions and Delete Invalid Branches
+
+on:
+  create:
+    branches:
+      - '**'
+
+jobs:
+  enforce-branch-naming:
+    runs-on:  [self-hosted, decathlon]
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Validate Branch Name
+        id: validate-branch-name
+        run: |
+          BRANCH_NAME="${GITHUB_REF##*/}"
+          echo "Branch Name: $BRANCH_NAME"
+          
+          if [[ ! "$BRANCH_NAME" =~ ^(feature|feat|fix|chore|bugfix|hotfix|Release|master).* ]]; then
+            echo "::error::Branch name '$BRANCH_NAME' does not follow the naming convention. It will be deleted."
+            echo "delete-branch=true" >> $GITHUB_ENV
+          else
+            echo "Branch naming convention passed!"
+            echo "delete-branch=false" >> $GITHUB_ENV
+          fi
+
+      - name: Delete Invalid Branch
+        if: env.delete-branch == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH_NAME="${GITHUB_REF##*/}"
+          echo "Deleting branch: $BRANCH_NAME"
+          
+          curl -X DELETE \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/git/refs/heads/$BRANCH_NAME"

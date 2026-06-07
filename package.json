@@ -1,0 +1,111 @@
+{
+  "name": "roster-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ashwinthomas/react-time-picker-dropdown": "^1.0.5",
+    "@chakra-ui/react": "^2.7.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@floating-ui/dom": "^1.5.3",
+    "@fontsource/roboto": "^5.0.8",
+    "@iammoin46/react-horizontal-progress-bar": "^1.0.1",
+    "@ramonak/react-progress-bar": "^5.2.0",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/node": "^16.18.35",
+    "@types/react": "^18.2.9",
+    "@types/react-dom": "^18.2.4",
+    "axios": "^1.4.0",
+    "chakra-dayzed-datepicker": "^0.2.9",
+    "date-fns": "^2.30.0",
+    "dayzed": "^3.2.3",
+    "downloadjs": "^1.4.7",
+    "env-cmd": "^10.1.0",
+    "firebase": "^10.4.0",
+    "framer-motion": "^10.12.16",
+    "html2canvas": "^1.4.1",
+    "jest-canvas-mock": "^2.5.2",
+    "jwt-decode": "^3.1.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "oidc-client": "^1.11.5",
+    "rc-time-picker": "^3.7.3",
+    "react": "^18.2.0",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-date-range": "1.4.0",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "react-lottie": "^1.2.3",
+    "react-multi-select-component": "^4.3.4",
+    "react-paginate": "^8.2.0",
+    "react-redux": "^8.0.7",
+    "react-router-dom": "^6.12.1",
+    "react-scripts": "5.0.1",
+    "react-select": "^5.7.4",
+    "react-time-picker": "^6.5.1",
+    "react-time-picker-input": "^2.2.3",
+    "react-toast-notifications": "^2.5.1",
+    "react-week-picker": "^1.1.4",
+    "recharts": "^2.12.2",
+    "redux": "^4.2.1",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.4.2",
+    "rsuite": "5.43.0",
+    "sass": "^1.66.1",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4",
+    "xlsx": "^0.18.5"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "./src/views/**",
+      "./src/components/**"
+    ]
+  },
+  "scripts": {
+    "start": "env-cmd -f env/india/localhost/.env react-scripts start",
+    "start-staging": "env-cmd -f env/india/staging/.env react-scripts start",
+    "build": "CI=false && env-cmd -f env/india/staging/.env react-scripts build",
+    "build:staging": "CI=false && env-cmd -f env/india/staging/.env react-scripts build",
+    "test": "react-scripts test --transformIgnorePatterns",
+    "test:coverage": "react-scripts test --transformIgnorePatterns -- --coverage",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.24.5",
+    "@types/downloadjs": "^1.4.6",
+    "@types/jest": "^29.5.12",
+    "@types/react-beautiful-dnd": "^13.1.5",
+    "@types/react-date-range": "^1.4.9",
+    "@types/react-lottie": "^1.2.7",
+    "@types/react-redux": "^7.1.25",
+    "@types/redux": "^3.6.0",
+    "@types/redux-persist": "^4.3.1",
+    "@types/redux-thunk": "^2.1.0",
+    "babel-jest": "^29.7.0",
+    "ts-jest": "^29.1.2"
+  }
+}

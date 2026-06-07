@@ -1,0 +1,3 @@
+export const FEDID_CLIENTID = process.env.REACT_APP_FEDID_CLIENTID;
+export const FEDID_RESPONSE_TYPE = process.env.REACT_APP_FEDID_RESPONSE_TYPE;
+export const FEDID_REDIRECT_URI = process.env.REACT_APP_FEDID_REDIRECT_URI;
