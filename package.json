@@ -71,6 +71,7 @@
     "start": "env-cmd -f env/india/localhost/.env react-scripts start",
     "start-staging": "env-cmd -f env/india/staging/.env react-scripts start",
     "build": "CI=false && env-cmd -f env/india/staging/.env react-scripts build",
+    "build:netlify": "CI=false react-scripts build",
     "build:staging": "CI=false && env-cmd -f env/india/staging/.env react-scripts build",
     "test": "react-scripts test --transformIgnorePatterns",
     "test:coverage": "react-scripts test --transformIgnorePatterns -- --coverage",
