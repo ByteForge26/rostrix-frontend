@@ -96,6 +96,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/preset-env": "^7.24.5",
     "@types/downloadjs": "^1.4.6",
     "@types/jest": "^29.5.12",

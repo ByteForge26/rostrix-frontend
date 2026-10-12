@@ -93,6 +93,7 @@ function AppUtility() {
 
   onMessageListener()
     .then((payload: any) => {
+      if (!payload) return;
       addToast(
         <Grid>
           <Text fontSize={"lg"} fontWeight={"medium"}>
