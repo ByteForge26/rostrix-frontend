@@ -7,11 +7,9 @@ import {
   Box,
   Divider,
   Flex,
-  Image,
   Text,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-import { effiMateLogoWhite } from "../helper/Images";
 import { DRAWER_WIDTH, NAV_HEIGHT } from "../helper/Constant";
 import { useAppDispatch, useAppSelector } from "../app/store/store";
 import { updateDrawerIndex } from "../app/slice/root.slice";
@@ -40,15 +38,15 @@ function AppDrawer({
   };
 
   return (
-    <Box position={"fixed"} zIndex={2} background={"#013F5E"}>
+    <Box position={"fixed"} zIndex={2} background={"#211a30"}>
       <Box
-        bg="#013F5E"
+        bg="#211a30"
         h="100vh"
         width={!isOpen ? 0 : DRAWER_WIDTH}
         position="fixed"
         zIndex={3}
         top="0"
-        boxShadow="md"
+        boxShadow="0 18px 48px rgba(24, 18, 36, 0.2)"
         left="0"
         style={{
           transition: "0.3s",
@@ -58,32 +56,48 @@ function AppDrawer({
         flexDirection={"column"}
       >
         <Flex
-          justifyContent={"left"}
+          justifyContent={"flex-start"}
           alignItems={"center"}
           height={`${NAV_HEIGHT}px`}
+          px={"5"}
+          gap={"3"}
+          onClick={() => {
+            navigate("/home", {
+              state: {
+                click: true,
+              },
+            });
+            dispatch(updateDrawerIndex(-1));
+          }}
+          cursor={"pointer"}
+          _hover={{ bg: "rgba(255,255,255,0.05)" }}
         >
-          <Image
-            display="block"
-            src={effiMateLogoWhite}
-            maxHeight={"90%"}
-            maxWidth={"100%"}
-            p={"4"}
-            pl={"6"}
-            cursor={"pointer"}
-            onClick={() => {
-              navigate("/home", {
-                state: {
-                  click: true,
-                },
-              });
-              dispatch(updateDrawerIndex(-1));
-            }}
-          />
+          <Flex
+            alignItems="center"
+            justifyContent="center"
+            width="36px"
+            height="36px"
+            bg="#d9ee9a"
+            color="#211a30"
+            borderRadius="xl"
+            fontSize="md"
+            fontWeight="900"
+          >
+            R
+          </Flex>
+          <Text
+            color="white"
+            fontSize="lg"
+            fontWeight="700"
+            letterSpacing="-0.02em"
+          >
+            Rostrix
+          </Text>
         </Flex>
         <Box>
-          <Divider />
+          <Divider borderColor="rgba(255,255,255,0.1)" />
         </Box>
-        <Box p="2">
+        <Box p="3">
           <Accordion
             allowToggle
             index={drawerIndex}
@@ -95,16 +109,17 @@ function AppDrawer({
                 <AccordionItem key={parentPath} border={"none"}>
                   <AccordionButton
                     color={"white"}
-                    style={{
-                      paddingLeft: "6px",
-                      paddingRight: "6px",
-                    }}
+                    px="3"
+                    py="2.5"
+                    borderRadius="lg"
+                    _hover={{ bg: "rgba(255,255,255,0.07)" }}
+                    _expanded={{ bg: "rgba(217,238,154,0.12)", color: "#d9ee9a" }}
                   >
                     <Box
                       as="span"
                       flex="1"
                       textAlign="left"
-                      fontSize={"15px"}
+                      fontSize={"sm"}
                       fontWeight={"medium"}
                       display={"flex"}
                       alignItems={"center"}
@@ -113,9 +128,11 @@ function AppDrawer({
                       <img
                         src={icon}
                         alt={""}
-                        width={20}
+                        width={18}
                         style={{
                           marginRight: 8,
+                          filter: "brightness(0) invert(1)",
+                          opacity: 0.75,
                         }}
                       />
                       {label}
@@ -132,25 +149,26 @@ function AppDrawer({
                       .map(({ label, path, isNew }, j) => (
                         <Flex
                           key={path}
-                          py={"2"}
+                          py={"2.5"}
                           px={"3"}
                           my={"1"}
                           background={
                             isSelected(parentPath + "/" + path)
-                              ? "#E9EEFF14"
+                              ? "rgba(217,238,154,0.13)"
                               : "transparent"
                           }
                           cursor={"pointer"}
-                          rounded={"sm"}
+                          rounded={"lg"}
                           onClick={() => onNavigate(parentPath + "/" + path)}
                           position={"relative"}
+                          _hover={{ bg: "rgba(255,255,255,0.07)" }}
                         >
                           <Text
                             fontSize={"13px"}
                             color={
                               isSelected(parentPath + "/" + path)
-                                ? "white"
-                                : "#ffffffe6"
+                                ? "#d9ee9a"
+                                : "rgba(255,255,255,0.76)"
                             }
                             fontWeight={
                               isSelected(parentPath + "/" + path)
@@ -167,14 +185,14 @@ function AppDrawer({
                               top={"2"}
                               bottom={"2"}
                               width={"3px"}
-                              background={"white"}
-                              rounded={"sm"}
+                              background={"#d9ee9a"}
+                              rounded={"full"}
                             ></Flex>
                           ) : null}
                           {isNew ? (
                             <Text
-                              background={"#ffff001a"}
-                              color={"yellow"}
+                              background={"rgba(217,238,154,0.14)"}
+                              color={"#d9ee9a"}
                               padding={"0px 4px"}
                               height={"fit-content"}
                               fontSize={"xx-small"}

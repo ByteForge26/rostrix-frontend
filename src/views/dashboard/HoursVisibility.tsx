@@ -1112,7 +1112,7 @@ function HoursVisibility() {
                                     legend={{
                                       key: "Total Hours",
                                       label: "Total Hours",
-                                      color: "#0071A9",
+                                      color: "#775CA7",
                                     }}
                                     absolute={isAbsolute}
                                     sort
@@ -1127,7 +1127,7 @@ function HoursVisibility() {
                                     legend={{
                                       key: "Total Hours",
                                       label: "Total Hours",
-                                      color: "#0071A9",
+                                      color: "#775CA7",
                                     }}
                                     absolute={isAbsolute}
                                     sort
@@ -1142,7 +1142,7 @@ function HoursVisibility() {
                                     legend={{
                                       key: "Total Hours",
                                       label: "Total Hours",
-                                      color: "#0071A9",
+                                      color: "#775CA7",
                                     }}
                                     absolute={isAbsolute}
                                     sort
@@ -1158,7 +1158,7 @@ function HoursVisibility() {
                                     legend={{
                                       key: "Total Hours",
                                       label: "Total Hours",
-                                      color: "#0071A9",
+                                      color: "#775CA7",
                                     }}
                                     absolute={isAbsolute}
                                     sort
@@ -1545,7 +1545,7 @@ function HoursVisibility() {
                                       {
                                         key: "Total Hours",
                                         label: "Total Hours",
-                                        color: "#0071A9",
+                                        color: "#775CA7",
                                       },
                                     ]}
                                     absolute
@@ -1573,7 +1573,7 @@ function HoursVisibility() {
                                       {
                                         key: "Total Hours",
                                         label: "Total Hours",
-                                        color: "#0071A9",
+                                        color: "#775CA7",
                                       },
                                     ]}
                                     absolute
@@ -1601,7 +1601,7 @@ function HoursVisibility() {
                                       {
                                         key: "Total Hours",
                                         label: "Total Hours",
-                                        color: "#0071A9",
+                                        color: "#775CA7",
                                       },
                                     ]}
                                     absolute

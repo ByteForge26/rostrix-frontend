@@ -23,10 +23,6 @@ jest.mock("../app/store/store", () => ({
   useAppDispatch: jest.fn(),
 }));
 
-jest.mock("../helper/Images", () => ({
-  effiMateLogoWhite: "mock-logo.png",
-}));
-
 jest.mock("../config/routes.config", () => ({
   ROUTES: [
     {
@@ -111,17 +107,10 @@ describe("AppDrawer Component", () => {
     };
   });
 
-  test("renders logo", () => {
+  test("renders the Rostrix brand", () => {
     render(<TestWrapper />);
 
-    const logos = screen.queryAllByRole("img", { name: "" });
-
-    const logo = logos.find(
-      (img) => img.getAttribute("src") === "mock-logo.png"
-    );
-
-    expect(logo).toBeInTheDocument();
-    expect(logo).toHaveAttribute("src", "mock-logo.png");
+    expect(screen.getByText("Rostrix")).toBeInTheDocument();
   });
 
   test("renders drawer menu items", () => {
@@ -158,18 +147,10 @@ describe("AppDrawer Component", () => {
     expect(newTag).toBeInTheDocument();
   });
 
-  test("handles logo click", () => {
+  test("navigates home when the Rostrix brand is clicked", () => {
     render(<TestWrapper />);
 
-    const logos = screen.queryAllByRole("img", { name: "" });
-
-    const logo = logos.find(
-      (img) => img.getAttribute("src") === "mock-logo.png"
-    );
-
-    if (logo) {
-      fireEvent.click(logo);
-    }
+    fireEvent.click(screen.getByText("Rostrix"));
 
     expect(mockNavigate).toHaveBeenCalledWith("/home", {
       state: { click: true },

@@ -1,11 +1,7 @@
-import effiMateLogo from "../assets/logo/effiMateLogo.png";
-import effiMateLogoWhite from "../assets/logo/effiMateLogoWhite.png";
 import rosterImage from "../assets/images/roster.png";
 import rosterV2Image from "../assets/images/rosterv2.gif";
-import homeImage from "../assets/images/home.gif";
 import noDataImage from "../assets/images/noData.gif";
-import noDashboardDataImage from "../assets/images/noDashboardDataImage.gif";
-import analyticsNoDataFound from "../assets/images/analyticsNoDataFound.gif";
+import dashboardEmptyState from "../assets/images/dashboard-empty-state.svg";
 import employeeSearchImage from "../assets/images/employeeSearch.gif";
 import CRM from "../assets/secondary-jobs/CRM.png";
 import DM from "../assets/secondary-jobs/DM.png";
@@ -57,14 +53,11 @@ const MODULES_ICONS = {
 };
 
 export {
-  effiMateLogo,
-  effiMateLogoWhite,
   rosterImage,
   rosterV2Image,
-  homeImage,
   noDataImage,
-  noDashboardDataImage,
-  analyticsNoDataFound,
+  dashboardEmptyState as noDashboardDataImage,
+  dashboardEmptyState as analyticsNoDataFound,
   employeeSearchImage,
   SECONDARY_JOBS_ICONS,
   EXTRACT,

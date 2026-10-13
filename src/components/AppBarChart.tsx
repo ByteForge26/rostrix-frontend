@@ -112,7 +112,8 @@ function AppBarChart(props: {
           padding: "6px 12px",
           background: "white",
           borderRadius: 8,
-          boxShadow: "0 0 4px 1px gray",
+          boxShadow: "0 8px 24px rgba(48, 37, 68, 0.14)",
+          border: "1px solid #e9e5e1",
         }}
       >
         <p
@@ -129,7 +130,7 @@ function AppBarChart(props: {
             ?.filter(({ disabled }) => disabled)
             .map(({ key, disabled, currency }) => ({
               dataKey: key,
-              fill: "#027DBC29",
+              fill: "#775CA729",
               value: modifiedData?.find((obj) => obj.name === label)[key] || 0,
               disabled: disabled,
               currency,

@@ -1,6 +1,38 @@
 * {
   font-family: "Roboto", sans-serif !important;
 }
+
+html,
+body,
+#root {
+  min-height: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f6f5f2;
+  color: #272333;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #efedf0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b9b0c6;
+  border-radius: 999px;
+}
+
+::selection {
+  color: #211a30;
+  background: #d9ee9a;
+}
+
 @keyframes topToBottom {
   from {
     top: -400px;
@@ -59,7 +91,7 @@
   cursor: pointer;
   margin-top: 16px;
   .active {
-    border: 1px solid #027dbc;
+    border: 1px solid #775ca7;
     border-radius: 50%;
   }
   .page-item {
@@ -73,7 +105,7 @@
   }
 }
 .rs-picker-menu .rs-calendar-table-cell-week-number {
-  background-color: #3138510d;
+  background-color: #3025440d;
   color: #718096;
   padding: 10px;
   font-weight: bold;
@@ -82,8 +114,8 @@
 .rs-picker-menu
   .rs-calendar-table-row:not(.rs-calendar-table-header-row):hover
   .rs-calendar-table-cell-content {
-  background-color: #027dbc29;
-  color: #027dbc;
+  background-color: #775ca71a;
+  color: #5f478c;
 }
 
 .rs-picker-menu
@@ -91,23 +123,23 @@
     .rs-calendar-table-cell-selected
   )
   .rs-calendar-table-cell-content {
-  background-color: #027dbc29;
-  color: #027dbc;
-  box-shadow: inset 0 0 0 1px #027dbc;
+  background-color: #775ca71a;
+  color: #5f478c;
+  box-shadow: inset 0 0 0 1px #775ca7;
 }
 .rs-calendar-table-cell-is-today .rs-calendar-table-cell-content {
-  box-shadow: inset 0 0 0 1px #027dbc;
+  box-shadow: inset 0 0 0 1px #775ca7;
 }
 .rs-picker-has-value .rs-btn .rs-picker-toggle-value,
 .rs-picker-has-value .rs-picker-toggle .rs-picker-toggle-value {
-  color: #027dbc;
+  color: #5f478c;
 }
 .rs-picker-default .rs-picker-toggle.rs-btn:hover,
 .rs-picker-default .rs-picker-toggle.rs-btn {
-  border-color: #027dbc;
+  border-color: #775ca7;
 }
 .rs-btn-primary {
-  background-color: #027dbc;
+  background-color: #49366c;
   color: white;
 }
 p + p {

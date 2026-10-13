@@ -118,7 +118,7 @@ function AppProgressBar(props: {
                         bgColor={
                           colorObj && colorObj.color
                             ? colorObj.color
-                            : "#0071A9"
+                            : "#775CA7"
                         }
                         customLabelStyles={{
                           display: "none",

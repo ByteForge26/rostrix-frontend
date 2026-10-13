@@ -155,7 +155,8 @@ function AppLineChart(props: {
           padding: "6px 12px",
           background: "white",
           borderRadius: 8,
-          boxShadow: "0 0 4px 1px gray",
+          boxShadow: "0 8px 24px rgba(48, 37, 68, 0.14)",
+          border: "1px solid #e9e5e1",
         }}
       >
         <p
@@ -174,7 +175,7 @@ function AppLineChart(props: {
             ?.filter(({ disabled }) => disabled)
             .map(({ key, disabled, currency }) => ({
               dataKey: key,
-              color: "#027DBC29",
+              color: "#775CA729",
               value: data.find((obj) => obj.key === key)?.value || 0,
               disabled: disabled,
               currency,

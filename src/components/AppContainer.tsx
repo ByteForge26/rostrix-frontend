@@ -44,7 +44,7 @@ function AppContainer({
         direction={"column"}
         paddingLeft={isMobile ? 0 : isOpen ? DRAWER_WIDTH : 0}
         transition={"0.3s"}
-        background={"white"}
+        background={"#f6f5f2"}
         minHeight={"100vh"}
         opacity={isMobile && isOpen ? 0.4 : 1}
       >
@@ -60,7 +60,9 @@ function AppContainer({
           mb={"2"}
           overflow={"auto"}
           minHeight={"calc(100vh - 72px)"}
-          background={bgColored ? "#f9f9f9" : "transparent"}
+          background={bgColored ? "#f6f5f2" : "transparent"}
+          px={{ base: "4", md: "6", xl: "8" }}
+          py={"5"}
         >
           {children}
         </Flex>

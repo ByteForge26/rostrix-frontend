@@ -1,7 +1,7 @@
 import { Flex, Grid, Text, Tooltip } from "@chakra-ui/react";
 import React from "react";
 import { BsInfoCircle } from "react-icons/bs";
-const colors = ["#027dbc", "#fbe1e1", "#f29727", "#57f227"];
+const colors = ["#775ca7", "#d9ee9a", "#e6a48b", "#a99abd"];
 
 function AppDashboardCards(props: {
   noColor?: boolean;
@@ -18,7 +18,11 @@ function AppDashboardCards(props: {
 
   return (
     <Grid
-      gridTemplateColumns={`repeat(${data.length}, 1fr)`}
+      gridTemplateColumns={{
+        base: "1fr",
+        md: `repeat(${Math.min(data.length, 2)}, minmax(0, 1fr))`,
+        xl: `repeat(${data.length}, minmax(0, 1fr))`,
+      }}
       width={"full"}
       gap={"4"}
       mb={"4"}
@@ -30,12 +34,12 @@ function AppDashboardCards(props: {
             <Flex
               key={i}
               p={"4"}
-              rounded={"lg"}
+              rounded={"2xl"}
               border={"1px solid"}
-              boxShadow={"0 0 8px 0 #d3d3d375"}
-              borderColor={"#e7e7e7"}
+              boxShadow={"0 8px 24px rgba(48, 37, 68, 0.05)"}
+              borderColor={"#e9e5e1"}
               direction={"column"}
-              background={`radial-gradient(circle at 10% 50%, ${colors[noColor ? 1 : i]}0d 0%, ${colors[noColor ? 1 : i]}1a 90%)`}
+              background={`radial-gradient(circle at 8% 10%, ${colors[noColor ? 1 : i]}1c 0%, #ffffff 76%)`}
             >
               {child.length > 1 ? (
                 <>

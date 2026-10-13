@@ -273,7 +273,7 @@ function AppDashboardFilter(props: {
                 months={2}
                 direction={"horizontal"}
                 dateDisplayFormat={"dd MMM yyyy"}
-                rangeColors={["#027DBC"]}
+                rangeColors={["#775CA7"]}
               />
             )}
           </ModalBody>

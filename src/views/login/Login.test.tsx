@@ -6,10 +6,6 @@ import { Provider } from "react-redux";
 import { store } from "../../app/store/store";
 import React from "react";
 
-jest.mock("../../helper/Images", () => ({
-  effiMateLogo: "mock-logo-url",
-}));
-
 jest.mock("../../hooks/useLogin", () => ({
   useLogin: jest.fn(),
 }));
@@ -49,7 +45,11 @@ describe("Login Component", () => {
       </Router>
     );
 
-    expect(screen.getByAltText("")).toBeInTheDocument();
+    expect(
+      screen.getByAltText("A preview of the workforce planning workspace")
+    ).toBeInTheDocument();
+    expect(screen.getByText("Rostrix")).toBeInTheDocument();
+    expect(screen.getByText("Welcome back")).toBeInTheDocument();
     expect(screen.getByPlaceholderText(/enter email/i)).toBeInTheDocument();
     expect(
       screen.getByRole("button", { name: /login with fedid/i })

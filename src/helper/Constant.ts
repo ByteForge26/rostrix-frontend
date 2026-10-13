@@ -261,7 +261,7 @@ export const RADIAN = Math.PI / 180;
 
 export const GRAPH_COLORS: ILegend[] = [
   {
-    color: "#0071A9",
+    color: "#775CA7",
     key: "COMMERCIAL",
     label: "Commercial",
     recommendedHoursKey: "COMMERCIAL",
@@ -272,7 +272,7 @@ export const GRAPH_COLORS: ILegend[] = [
     ],
   },
   {
-    color: "#FF4B3F",
+    color: "#E36A5C",
     key: "NON_COMMERCIAL",
     label: "Non-Commercial",
     recommendedHoursKey: "GENERAL",
@@ -284,7 +284,7 @@ export const GRAPH_COLORS: ILegend[] = [
     ],
   },
   {
-    color: "#FDB833",
+    color: "#A5B75E",
     key: "CASHIERING",
     label: "Cashiering",
     recommendedHoursKey: "CASHIERING",
@@ -295,7 +295,7 @@ export const GRAPH_COLORS: ILegend[] = [
     ],
   },
   {
-    color: "#28AFB0",
+    color: "#BCA9DB",
     key: "ECOMMERCE",
     label: "E-Commerce",
     recommendedHoursKey: "ECOMMERCE",
@@ -309,7 +309,7 @@ export const GRAPH_COLORS: ILegend[] = [
 
 export const MH_LEGENDS: ILegend[] = [
   {
-    color: "#0071A9",
+    color: "#775CA7",
     key: "totalHours",
     label: "Total Hours",
   },
@@ -321,78 +321,78 @@ export const MH_LEGENDS: ILegend[] = [
 ];
 export const EFF_LEGENDS: ILegend[] = [
   {
-    color: "#0071A9",
+    color: "#775CA7",
     key: "r_eff",
     label: "Realised Efficiency",
   },
   {
-    color: "#FDB833",
+    color: "#A5B75E",
     key: "p_eff",
     label: "Piloted Efficiency",
   },
 ];
 export const PRO_LEGENDS: ILegend[] = [
   {
-    color: "#0071A9",
+    color: "#775CA7",
     key: "r_prod",
     label: "Realised Productivity",
   },
   {
-    color: "#FDB833",
+    color: "#A5B75E",
     key: "p_prod",
     label: "Piloted Productivity",
   },
 ];
 export const FT_PT_LEGENDS: ILegend[] = [
   {
-    color: "#0071A9",
+    color: "#775CA7",
     key: "FULL_TIME",
     label: "Full Time",
   },
   {
-    color: "#FDB833",
+    color: "#A5B75E",
     key: "NON_FULL_TIME",
     label: "Part Time",
   },
 ];
 export const WD_NWD_LEGENDS: ILegend[] = [
   {
-    color: "#0071A9",
+    color: "#775CA7",
     key: "Weekday",
     label: "Weekday",
   },
   {
-    color: "#FDB833",
+    color: "#A5B75E",
     key: "Non-Weekday",
     label: "Weekend",
   },
 ];
 export const PK_NPK_LEGENDS: ILegend[] = [
   {
-    color: "#0071A9",
+    color: "#775CA7",
     key: "PEAK",
     label: "Peak",
   },
   {
-    color: "#FDB833",
+    color: "#A5B75E",
     key: "NON_PEAK",
     label: "Non Peak",
   },
 ];
 export const AFFINITY_LEGENDS: ILegend[] = [
   {
-    color: "#0071A9",
+    color: "#775CA7",
     key: "AFFINITY_RATE",
     label: "Affinity Rate",
   },
   {
-    color: "#FDB833",
+    color: "#A5B75E",
     key: "TOTAL_HOURS",
     label: "Total Commercial Hours",
     disabled: true,
   },
   {
-    color: "#28AFB0",
+    color: "#BCA9DB",
     key: "TURN_OVER",
     label: "Total Turnover",
     disabled: true,
@@ -401,24 +401,24 @@ export const AFFINITY_LEGENDS: ILegend[] = [
 ];
 export const ECO_COM_LEGENDS: ILegend[] = [
   {
-    color: "#009660",
+    color: "#A5B75E",
     key: "ecoFriendlyKm",
     label: "Eco Friendly",
   },
   {
-    color: "#FF4B3F",
+    color: "#E36A5C",
     key: "nonEcoFriendlyKm",
     label: "Non-Eco Friendly",
   },
 ];
 export const ECO_COM_GROWTH_LEGENDS: ILegend[] = [
   {
-    color: "#009660",
+    color: "#A5B75E",
     key: "ECO_KM",
     label: "Eco Friendly",
   },
   {
-    color: "#FF4B3F",
+    color: "#E36A5C",
     key: "NON_ECO_KM",
     label: "Non-Eco Friendly",
   },
@@ -475,7 +475,7 @@ export const MODE_OF_COMMUTE = [
 ];
 export const ECO_COM_LEGENDS_CAT: ILegend[] = [
   ...MODE_OF_COMMUTE.map(({ label, value }) => ({
-    color: "#009660",
+    color: "#A5B75E",
     key: value,
     label,
   })),
@@ -488,17 +488,17 @@ export const COMMUTE_CATEGORIES = [
   },
   {
     label: "Electric",
-    color: "#027DBC",
+    color: "#BCA9DB",
     includes: ["ELECTRIC_CAR", "ELECTRIC_MOTORCYCLE"],
   },
   {
     label: "Public / Shared",
-    color: "#F29727",
+    color: "#E9A27E",
     includes: ["BUS", "TRAIN_METRO", "CARPOOLING"],
   },
   {
     label: "Fuel-based",
-    color: "#FF4B3F",
+    color: "#E36A5C",
     includes: ["CAR", "MOTORCYCLE", "AUTO_RICKSHAW"],
   },
 ];

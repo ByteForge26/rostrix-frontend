@@ -3,10 +3,19 @@ import { extendTheme } from "@chakra-ui/react";
 const theme = extendTheme({
   colors: {
     red: {
-      500: "#e85f5f",
+      500: "#e36a5c",
     },
     brand: {
-      500: "#027DBC",
+      50: "#f4f1fb",
+      100: "#e8e2f4",
+      200: "#d7cceb",
+      300: "#bca9db",
+      400: "#9a80c5",
+      500: "#775ca7",
+      600: "#5f478c",
+      700: "#49366c",
+      800: "#302544",
+      900: "#211a30",
     },
   },
   fonts: {
@@ -16,11 +25,16 @@ const theme = extendTheme({
     Button: {
       variants: {
         sm: {
-          bg: "#027DBC",
+          bg: "#302544",
           color: "white",
           fontSize: "sm",
+          fontWeight: 700,
+          borderRadius: "xl",
+          boxShadow: "0 8px 18px rgba(48, 37, 68, 0.16)",
           _hover: {
-            boxShadow: "0 0 2px 0 lightgray",
+            bg: "#49366c",
+            boxShadow: "0 12px 22px rgba(48, 37, 68, 0.22)",
+            transform: "translateY(-1px)",
           },
           _disabled: {
             _hover: {
@@ -30,17 +44,23 @@ const theme = extendTheme({
         },
         outline: {
           fontSize: "sm",
-          bg: "#027DBC29",
-          color: "#027DBC",
-          border: "none",
+          bg: "#f4f1fb",
+          color: "#49366c",
+          border: "1px solid #e2dbee",
+          borderRadius: "xl",
           _hover: {
-            bg: "#027DBC29",
-            boxShadow: "0 0 2px 0 #027DBC29",
+            bg: "#e8e2f4",
+            boxShadow: "0 8px 18px rgba(48, 37, 68, 0.1)",
           },
         },
       },
       defaultProps: {
         variant: "sm",
+      },
+    },
+    Input: {
+      defaultProps: {
+        focusBorderColor: "brand.500",
       },
     },
   },

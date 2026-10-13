@@ -62,17 +62,37 @@ function AppNavbar({
       justifyContent={"space-between"}
       fontSize={"xs"}
       alignItems="center"
-      p={2}
+      px={{ base: 3, md: 6 }}
+      py={2}
       height={isInfoShow ? `${NAV_HEIGHT + INFO_HEIGHT}px` : `${NAV_HEIGHT}px`}
-      borderBottom={"1px solid #F2F2F2"}
-      background={"white"}
+      borderBottom={"1px solid #e9e6e3"}
+      background={"rgba(255,255,255,0.9)"}
+      backdropFilter="blur(14px)"
       wrap={"wrap"}
       transition={"0.3s"}
+      position="sticky"
+      top="0"
+      zIndex="10"
     >
-      <Flex pl={"4"} alignItems={"center"}>
-        <AiOutlineMenu size={18} onClick={onToggle} cursor={"pointer"} />
+      <Flex pl={{ base: 1, md: 2 }} alignItems={"center"}>
+        <Flex
+          as="button"
+          aria-label="Toggle navigation"
+          alignItems="center"
+          justifyContent="center"
+          width="38px"
+          height="38px"
+          borderRadius="xl"
+          color="brand.800"
+          bg="transparent"
+          _hover={{ bg: "brand.50" }}
+          onClick={onToggle}
+          cursor="pointer"
+        >
+          <AiOutlineMenu size={18} />
+        </Flex>
         {heading && !isMobile ? (
-          <Text fontSize={"xl"} fontWeight={"medium"} ml={"4"}>
+          <Text fontSize={"lg"} fontWeight={"700"} ml={"4"} color="brand.800">
             {heading}
           </Text>
         ) : null}
@@ -87,7 +107,7 @@ function AppNavbar({
                 />
                 <BsFillTriangleFill
                   size={"20px"}
-                  color="#EBF3F8"
+                  color="#eeeaf2"
                   style={{
                     position: "absolute",
                     bottom: "-26px",
@@ -121,7 +141,8 @@ function AppNavbar({
               <AiOutlineUser
                 fontSize={"36"}
                 style={{
-                  background: "#F2F2F2",
+                  background: "#eeeaf2",
+                  color: "#49366c",
                   padding: 8,
                   borderRadius: "50%",
                   marginRight: 8,
@@ -158,7 +179,7 @@ function AppNavbar({
           overflow={"hidden"}
           transition={"0.3s"}
           alignItems={"center"}
-          background={"#EBF3F8"}
+          background={"#f4f1fb"}
           mx={"4"}
           px={"4"}
           rounded={"md"}

@@ -93,10 +93,10 @@ function AppDashboardFilterDetails(props: {
               .filter(({ isActive }) => isActive)
               .map(({ label, value }, i) => (
                 <Flex key={i} background={"white"} padding={"2px 8px"} mr={"2"}>
-                  <Text fontWeight={"medium"} color={"#615E83"}>
+                  <Text fontWeight={"medium"} color={"#756d7d"}>
                     {`${label}:`}
                   </Text>
-                  <Text ml={"1"} color={"#615E83"}>
+                  <Text ml={"1"} color={"#756d7d"}>
                     {value}
                   </Text>
                 </Flex>

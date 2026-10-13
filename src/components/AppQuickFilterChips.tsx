@@ -31,7 +31,7 @@ function AppQuickFilterChips(props: {
               orientation="vertical"
               height={"6"}
               mx={"1"}
-              background={"#027DBC"}
+              background={"#302544"}
             />
           ) : null}
           <Flex
@@ -61,7 +61,7 @@ function AppQuickFilterChips(props: {
               padding: "5px 12px",
               borderRadius: 26,
               alignItems: "center",
-              boxShadow: "0 0 1px 0 #027DBC",
+              boxShadow: "0 0 1px 0 #302544",
               border: `1px solid ${filter.color || "black"}`,
               opacity: selectedFilters.includes(filter.value) ? 1 : 0.6,
             }}

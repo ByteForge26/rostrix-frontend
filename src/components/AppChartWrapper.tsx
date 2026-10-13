@@ -48,17 +48,18 @@ const AppChartWrapper = (props: {
   return (
     <Flex
       width={width ? width : "100%"}
-      p={"6"}
+      p={{ base: "4", md: "6" }}
       m={"1"}
-      rounded={"md"}
+      rounded={"2xl"}
       direction={"column"}
       style={{
-        boxShadow: "0px 0px 4px 0 lightgray",
+        boxShadow: "0 8px 24px rgba(48, 37, 68, 0.05)",
       }}
       background={"white"}
+      border="1px solid #e9e5e1"
     >
       <Flex width={"full"} pb={"4"} justifyContent={"space-between"}>
-        <Text fontSize={"lg"} fontWeight={"medium"}>
+        <Text fontSize={"md"} fontWeight={"700"} color="brand.800">
           {heading}
         </Text>
         <Flex>
@@ -82,7 +83,7 @@ const AppChartWrapper = (props: {
                           background: color,
                         }}
                       ></Flex>
-                      <Text color={"#615E83"}>{label}</Text>
+                      <Text color={"#756d7d"}>{label}</Text>
                     </Flex>
                   );
                 })}
@@ -208,10 +209,10 @@ const AppChartWrapper = (props: {
                       width: 25,
                       borderTop: "1px",
                       borderStyle,
-                      borderColor: "#615E83",
+                      borderColor: "#756d7d",
                     }}
                   ></Flex>
-                  <Text color={"#615E83"}>{label}</Text>
+                  <Text color={"#756d7d"}>{label}</Text>
                 </Flex>
               );
             })}

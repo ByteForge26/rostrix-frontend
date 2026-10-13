@@ -33,7 +33,7 @@ function AppFilterChips(props: {
               padding: "6px 16px",
               borderRadius: 26,
               alignItems: "center",
-              boxShadow: "0 0 1px 0 #027DBC",
+              boxShadow: "0 0 1px 0 #302544",
             }}
           >
             <Text mr={"1"} whiteSpace={"nowrap"}>
